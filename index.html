@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victoire Colette - Portfolio</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; padding: 20px; }
+        .container { max-width: 1200px; margin: 0 auto; background: white; border-radius: 15px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); overflow: hidden; }
+        header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 40px 20px; text-align: center; }
+        header h1 { font-size: 2.5em; margin-bottom: 5px; }
+        header .subtitle { font-size: 1.1em; opacity: 0.9; }
+        .tabs { display: flex; background: #f8f9ff; border-bottom: 2px solid #e0e0e0; overflow-x: auto; }
+        .tab-btn { flex: 1; padding: 18px 15px; border: none; background: none; color: #667eea; font-weight: bold; cursor: pointer; border-bottom: 3px solid transparent; font-size: 0.95em; white-space: nowrap; }
+        .tab-btn:hover { background: #f0f0f0; }
+        .tab-btn.active { color: #764ba2; border-bottom-color: #764ba2; }
+        .tab-content { display: none; padding: 40px 20px; }
+        .tab-content.active { display: block; }
+        section h2 { color: #667eea; font-size: 2em; margin-bottom: 30px; text-align: center; }
+        section h3 { color: #764ba2; font-size: 1.3em; margin-top: 25px; margin-bottom: 15px; }
+        .about-content { max-width: 800px; margin: 0 auto; color: #555; line-height: 1.8; }
+        .about-content p { margin-bottom: 15px; }
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .project-card { background: #f8f9ff; border-left: 4px solid #667eea; padding: 20px; border-radius: 8px; }
+        .project-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .project-card h3 { color: #764ba2; margin-bottom: 10px; font-size: 1.1em; }
+        .project-card p { color: #555; line-height: 1.6; font-size: 0.95em; }
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 15px; max-width: 900px; margin: 0 auto; }
+        .skill-badge { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 15px; border-radius: 8px; text-align: center; font-weight: bold; }
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; max-width: 900px; margin: 0 auto 40px; }
+        .contact-item { padding: 20px; background: #f8f9ff; border-radius: 8px; text-align: center; }
+        .contact-item h3 { color: #667eea; margin-bottom: 10px; }
+        .contact-item a { color: #667eea; text-decoration: none; }
+        .full-img { width: 100%; max-width: 800px; margin: 20px auto; display: block; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .info-box { background: #f8f9ff; padding: 20px; border-radius: 8px; margin: 20px 0; color: #555; line-height: 1.8; }
+        .cv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; padding: 30px; }
+        .cv-item { text-align: center; }
+        .cv-item h4 { color: #667eea; margin-bottom: 15px; font-size: 1.2em; }
+        .cv-item img { width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        footer { background: #f8f9ff; padding: 20px; text-align: center; color: #999; }
+        @media (max-width: 768px) { header h1 { font-size: 1.8em; } .cv-grid { grid-template-columns: 1fr; } .tab-btn { padding: 12px 10px; font-size: 0.85em; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Victoire Colette</h1>
+            <div class="subtitle">BUT Génie Mécanique et Productique - Alstom Transport</div>
+        </header>
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab(event, 'accueil')">Accueil</button>
+            <button class="tab-btn" onclick="switchTab(event, 'projets')">Projets & Compétences</button>
+            <button class="tab-btn" onclick="switchTab(event, 'alternance')">Alternance</button>
+            <button class="tab-btn" onclick="switchTab(event, 'futurs')">Projets Futurs</button>
+            <button class="tab-btn" onclick="switchTab(event, 'contact')">Contact</button>
+        </div>
+
+        <!-- ACCUEIL -->
+        <div id="accueil" class="tab-content active">
+            <section>
+                <h2>Bienvenue</h2>
+                <div class="about-content">
+                    <p>19 ans, étudiante en BUT Génie Mécanique et Productique en alternance chez Alstom Transport. Passionnée par la mécanique, le design et l'innovation.</p>
+                    <h3>Qui suis-je ?</h3>
+                    <p>Avec 13 ans de pratique en équitation en compétition, j'ai développé une grande discipline et un esprit de dépassement.</p>
+                    <h3>Mes Passions</h3>
+                    <p>En dehors des cours, je m'épanouis à travers des activités créatives et manuelles comme le dessin et la construction LEGO. Je suis une grande fan de Formule 1.</p>
+                    <p>Férue de sports de sensations fortes, je fais du ski en montagne. J'aime aussi voyager pour découvrir de nouvelles cultures.</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- PROJETS -->
+        <div id="projets" class="tab-content">
+            <section>
+                <h2>Mes Projets</h2>
+                <div class="projects-grid">
+                    <div class="project-card"><img src="images/photo1.jpg" alt=""><h3>Première utilisation de SolidWorks</h3><p>Découverte et premiers pas avec SolidWorks pour la modélisation 3D.</p></div>
+                    <div class="project-card"><img src="images/photo2.jpg" alt=""><h3>Usinage sur machine HAAS</h3><p>Première expérience d'usinage sur la machine HAAS.</p></div>
+                    <div class="project-card"><img src="images/photo3.png" alt=""><h3>SAÉ 1 - Étrier de frein (Conception)</h3><p>Création d'un étrier de frein basé sur des données SolidWorks.</p></div>
+                    <div class="project-card"><img src="images/photo4.jpg" alt=""><h3>SAÉ 1 - Étrier de frein (Validation)</h3><p>Test de l'étrier sur une roue pour vérifier les coordonnées.</p></div>
+                    <div class="project-card"><img src="images/photo5.jpg" alt=""><h3>TP Usinage</h3><p>Travaux pratiques d'usinage en atelier.</p></div>
+                    <div class="project-card"><img src="images/photo6.jpg" alt=""><h3>TP Moulage</h3><p>Travaux pratiques de moulage et fabrication.</p></div>
+                    <div class="project-card"><img src="images/sae_alstom.jpg" alt=""><h3>SAÉ - Boîte de Commande</h3><p>Conception SolidWorks, programmation Fusion 360, fabrication par Stratoconception.</p></div>
+                    <div class="project-card"><img src="images/photo_metrologie.jpg" alt=""><h3>TP Métrologie</h3><p>Techniques de mesure de précision et contrôle qualité.</p></div>
+                    <div class="project-card"><img src="images/photo_traction.jpg" alt=""><h3>SAÉ - Essai de Traction</h3><p>Essai de traction sur machine Inspekt 30-1 pour caractériser les matériaux.</p></div>
+                    <div class="project-card"><img src="images/photo_usinage_sae.jpg" alt=""><h3>SAÉ - Étude de Cycle & Usinage</h3><p>Analyse complète du cycle de production, simogramme et usinage.</p></div>
+                </div>
+            </section>
+            <section>
+                <h2>Compétences & Logiciels</h2>
+                <div class="skills-grid">
+                    <div class="skill-badge">CATIA</div>
+                    <div class="skill-badge">SolidWorks</div>
+                    <div class="skill-badge">Fusion 360</div>
+                    <div class="skill-badge">AutoCAD</div>
+                    <div class="skill-badge">RoboDK</div>
+                    <div class="skill-badge">Excel</div>
+                    <div class="skill-badge">Word</div>
+                    <div class="skill-badge">MATLAB</div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ALTERNANCE -->
+        <div id="alternance" class="tab-content">
+            <section>
+                <h2>Mon Alternance - Alstom Transport</h2>
+                <div class="about-content">
+                    <h3>Entreprise</h3>
+                    <p>Alstom Transport est un leader mondial dans le transport ferroviaire. Mon alternance débute en septembre 2025.</p>
+                    
+                    <h3>Secteur d'Activité</h3>
+                    <img src="images/alstom_sector.png" class="full-img" alt="">
+                    
+                    <h3>Suivi de Production - Planning LC1001</h3>
+                    <img src="images/planning_lc1001.png" class="full-img" alt="">
+                    <div class="info-box"><strong>Mission :</strong> Suivi quotidien de l'avancée de fabrication des trains. Mise à jour des tâches pour respecter les délais.</div>
+                    
+                    <h3>Tableau de Pilotage - Coûts/Qualité/Délais</h3>
+                    <img src="images/tableau_suivi_projets.png" class="full-img" alt="">
+                    <div class="info-box">Pilotage des projets RER, GPE, Marseille et Le Caire avec monitoring des indicateurs clés.</div>
+                    
+                    <h3>Documentation Opérationnelle</h3>
+                    <img src="images/enclenchement_taches.png" class="full-img" alt="">
+                    <div class="info-box">Rédaction de toutes les tâches à effectuer par les opérateurs.</div>
+                    
+                    <h3>Suivi & Optimisation - Planning RER</h3>
+                    <img src="images/planning_rer.png" class="full-img" alt="">
+                    <div class="info-box">Suivi heure par heure et optimisation des temps de cycle.</div>
+                </div>
+            </section>
+        </div>
+
+        <!-- PROJETS FUTURS -->
+        <div id="futurs" class="tab-content">
+            <section>
+                <h2>Mes Projets Futurs</h2>
+                <h3>Pendant mon BUT</h3>
+                <img src="images/mes_projets.png" class="full-img" alt="">
+                <p style="color:#555; line-height:1.8; max-width:800px; margin:20px auto;">Mon projet et mes attentes avec un BUT GMP sont divers. J'aimerais acquérir des compétences en conception de systèmes mécaniques et apprendre la modélisation 3D.</p>
+                
+                <h3>Après le BUT ?</h3>
+                <img src="images/apres_but.png" class="full-img" alt="">
+                <p style="color:#555; line-height:1.8; max-width:800px; margin:20px auto;">J'envisage une école d'ingénieur comme ESTACA ou EIGSI, ou un master en alternance. J'aimerais intégrer Alstom, Renault, ou un jour Alpine F1 team.</p>
+            </section>
+        </div>
+
+        <!-- CONTACT -->
+        <div id="contact" class="tab-content">
+            <section>
+                <h2>Me Contacter</h2>
+                <div class="contact-grid">
+                    <div class="contact-item"><h3>📧 Email</h3><p><a href="mailto:Victoire.colette@gmail.com">Victoire.colette@gmail.com</a></p></div>
+                    <div class="contact-item"><h3>📞 Téléphone</h3><p><a href="tel:+33652897718">+33 6 52 89 77 18</a></p></div>
+                    <div class="contact-item"><h3>📍 Localisation</h3><p>Valenciennes</p></div>
+                </div>
+                <h2>Mes CV</h2>
+                <div class="cv-grid">
+                    <div class="cv-item"><h4>CV Français</h4><img src="images/CV_FR.png" alt=""></div>
+                    <div class="cv-item"><h4>CV English</h4><img src="images/CV_EN.png" alt=""></div>
+                </div>
+            </section>
+        </div>
+
+        <footer><p>&copy; 2024 Victoire Colette - Portfolio</p></footer>
+    </div>
+
+    <script>
+        function switchTab(event, tabName) {
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
