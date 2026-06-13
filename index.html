@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victoire Colette - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 5px;
+        }
+
+        header .subtitle {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        section {
+            padding: 40px 20px;
+            border-bottom: 2px solid #eee;
+        }
+
+        section h2 {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        section h3 {
+            color: #764ba2;
+            font-size: 1.3em;
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .about-content p {
+            margin-bottom: 15px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background: #f8f9ff;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .project-card h3 {
+            color: #764ba2;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            background: #e0e0e0;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 15px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .skill-badge {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .contact-item {
+            padding: 20px;
+            background: #f8f9ff;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .contact-item h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .contact-item a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .full-width-img {
+            width: 100%;
+            max-width: 900px;
+            margin: 20px auto;
+            display: block;
+            border-radius: 8px;
+        }
+
+        .info-box {
+            background: #f8f9ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        footer {
+            background: #f8f9ff;
+            padding: 20px;
+            text-align: center;
+            color: #999;
+        }
+
+        .cv-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            padding: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .cv-item {
+            text-align: center;
+        }
+
+        .cv-item h4 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .cv-item a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .cv-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Victoire Colette</h1>
+            <div class="subtitle">BUT Génie Mécanique et Productique - Alstom Transport</div>
+        </header>
+
+        <!-- ACCUEIL -->
+        <section>
+            <h2>Bienvenue</h2>
+            <div class="about-content">
+                <p>19 ans, étudiante en BUT Génie Mécanique et Productique en alternance chez Alstom Transport. Passionnée par la mécanique, le design et l'innovation.</p>
+
+                <h3>Qui suis-je ?</h3>
+                <p>Avec 13 ans de pratique en équitation en compétition, j'ai développé une grande discipline et un esprit de dépassement. Ces valeurs me suivent dans mes études et mon alternance.</p>
+
+                <h3>Mes Passions</h3>
+                <p>En dehors des cours, je m'épanouis à travers des activités créatives et manuelles comme le dessin et la construction LEGO. Je suis une grande fan de Formule 1 - une passion que je partage chaque week-end avec ma sœur et mon père.</p>
+
+                <p>Férue de sports de sensations fortes, je profite de mes temps libres pour m'évader en montagne et faire du ski. J'aime aussi voyager pour découvrir de nouvelles cultures et explorer notre histoire commune.</p>
+            </div>
+        </section>
+
+        <!-- PROJETS -->
+        <section>
+            <h2>Mes Projets & Compétences</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image"><img src="images/photo1.jpg" alt="SolidWorks"></div>
+                    <h3>Première utilisation de SolidWorks</h3>
+                    <p>Découverte et premiers pas avec le logiciel SolidWorks pour la modélisation 3D de pièces mécaniques.</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-image"><img src="images/photo2.jpg" alt="Machine HAAS"></div>
+                    <h3>Usinage sur machine HAAS</h3>
+                    <p>Première expérience d'usinage d'une pièce sur la machine HAAS, application pratique des concepts de fabrication.</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-image"><img src="images/photo3.png" alt="Étrier conception"></div>
+                    <h3>SAÉ 1 - Étrier de frein (Conception)</h3>
+                    <p>Création d'un étrier de frein basée sur des données d'angles et coordonnées extraites de SolidWorks.</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-image"><img src="images/photo4.jpg" alt="Étrier test"></div>
+                    <h3>SAÉ 1 - Étrier de frein (Validation)</h3>
+                    <p>Test de l'étrier de frein réalisé sur une roue pour vérifier l'exactitude des coordonnées.</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-image"><img src="images/photo5.jpg" alt="Usinage"></div>
+                    <h3>TP Usinage</h3>
+                    <p>Travaux pratiques d'usinage appliquant les techniques de fabrication et de précision en atelier.</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-image"><img src="images/photo6.jpg" alt="Moulage"></div>
+                    <h3>TP Moulage</h3>
+                    <p>Travaux pratiques de moulage et fabrication additive pour la production de pièces.</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-image"><img src="images/sae_alstom.jpg" alt="Boîte"></div>
+                    <h3>SAÉ - Boîte de Commande</h3>
+                    <p>Conception sur SolidWorks, programmation usinage sur Fusion 360, fabrication par Stratoconception.</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">📏</div>
+                    <h3>TP Métrologie</h3>
+                    <p>Travaux pratiques de métrologie pour apprendre les techniques de mesure de précision.</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">🔬</div>
+                    <h3>SAÉ - Essai de Traction</h3>
+                    <p>Essai de traction sur machine Inspekt 30-1 pour caractériser les propriétés mécaniques des matériaux.</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">⚙️</div>
+                    <h3>SAÉ - Étude de Cycle & Usinage</h3>
+                    <p>Projet complet d'étude de fabrication incluant analyse du cycle, simogramme et usinage.</p>
+                </div>
+            </div>
+
+            <h2 style="margin-top: 40px;">Compétences & Logiciels</h2>
+            <div class="skills-grid">
+                <div class="skill-badge">CATIA</div>
+                <div class="skill-badge">SolidWorks</div>
+                <div class="skill-badge">Fusion 360</div>
+                <div class="skill-badge">AutoCAD</div>
+                <div class="skill-badge">RoboDK</div>
+                <div class="skill-badge">Excel</div>
+                <div class="skill-badge">Word</div>
+                <div class="skill-badge">MATLAB</div>
+            </div>
+        </section>
+
+        <!-- ALTERNANCE -->
+        <section>
+            <h2>Mon Alternance - Alstom Transport</h2>
+            <div class="about-content">
+                <h3>Entreprise</h3>
+                <p>Alstom Transport est un leader mondial dans le secteur du transport ferroviaire. Mon alternance débute en septembre 2025.</p>
+
+                <h3>Mission & Responsabilités</h3>
+                <p>Suivi de production, optimisation des délais, documentation opérationnelle et pilotage des projets majeurs (RER, GPE, Marseille, Le Caire).</p>
+
+                <h3>Compétences Développées</h3>
+                <p>Gestion de production, optimisation de processus, suivi de projets, respect des délais et de la qualité.</p>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section>
+            <h2>Me Contacter</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <h3>📧 Email</h3>
+                    <p><a href="mailto:Victoire.colette@gmail.com">Victoire.colette@gmail.com</a></p>
+                </div>
+                <div class="contact-item">
+                    <h3>📞 Téléphone</h3>
+                    <p><a href="tel:+33652897718">+33 6 52 89 77 18</a></p>
+                </div>
+                <div class="contact-item">
+                    <h3>📍 Localisation</h3>
+                    <p>Valenciennes</p>
+                </div>
+            </div>
+
+            <h2 style="margin-top: 40px;">Mes CV</h2>
+            <div class="cv-grid">
+                <div class="cv-item">
+                    <h4>CV Français</h4>
+                    <a href="cv/CV_Victoire_FR.pdf" target="_blank">📄 Télécharger</a>
+                </div>
+                <div class="cv-item">
+                    <h4>CV English</h4>
+                    <a href="cv/CV_Victoire_EN.pdf" target="_blank">📄 Download</a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Victoire Colette - Portfolio</p>
+        </footer>
+    </div>
+</body>
+</html>
